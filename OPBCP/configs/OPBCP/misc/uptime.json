@@ -1,0 +1,8 @@
+{
+    "daysEmbed": "days: ",
+    "hoursEmbed": "hours: ",
+    "minutesEmbed": "minutes: ",
+    "secondsEmbed": "seconds: ",
+    "embedColor": "#0099ff",
+    "embedTitle": "uptime"
+}

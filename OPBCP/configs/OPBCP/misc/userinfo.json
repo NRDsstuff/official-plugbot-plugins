@@ -1,0 +1,10 @@
+{
+    "embedColor": "#0064FF",
+    "embedTitle": "**User info**",
+    "embedUsername": "username: ",
+    "embedTag": "tag: ",
+    "embedID": "ID: ",
+    "embedStatus": "status: ",
+    "embedBot": "is this account a bot: ",
+    "embedCreatedAt": "account created at "
+}

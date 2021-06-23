@@ -1,0 +1,9 @@
+{
+    "embedColor": "#4B4B4B",
+    "yes": " - yes | ",
+    "no": " - no",
+    "yesEmoji": "👍",
+    "noEmoji": "👎",
+    "noText": "i don't know what to start a vote for",
+    "embedTitle": " starts a vote"
+}

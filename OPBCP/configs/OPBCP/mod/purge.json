@@ -1,0 +1,5 @@
+{
+    "tooLowMessages": "please input a number higher than 0",
+    "invalidMessages": "please input a number",
+    "invalidPermissions": "invalid permissions"
+}

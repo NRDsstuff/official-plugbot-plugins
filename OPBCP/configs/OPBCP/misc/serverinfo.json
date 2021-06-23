@@ -1,0 +1,11 @@
+{
+    "embedTitle": "server info",
+    "embedColor": "RANDOM",
+    "name": "name: ",
+    "ID": "ID: ",
+    "owner": "owner: ",
+    "region": "region: ",
+    "verified": "verified? ",
+    "users": "users: ",
+    "createdAt": "created at: "
+}

@@ -1,0 +1,7 @@
+{
+    "invalidUser": "invalid user",
+    "invalidPermissions": "invalid permissions",
+    "noBanReason": "no reason given",
+    "banMessage": " has been banned",
+    "mentionBannedUser": "true"
+}

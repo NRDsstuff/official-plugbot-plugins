@@ -1,0 +1,7 @@
+{
+    "privateChannelName": "private",
+    "roleName": "Verified",
+    "registeredMessage": "Verified successfully",
+    "embedColor": "#0099ff",
+    "consoleLog": "someone wants to verify"
+}
