@@ -52,13 +52,6 @@ module.exports = {
 
     log.save(`channel created. channel name: ${privateChannelName} - ${RegisteredUserID}`, './logs/OPBCP/register.txt')
 
-    const logged5 = `
-    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    sent message
-    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                                            
-    |                                                                                                                                                                                     |
-    V                                                                                                                                                                                     V`
-
     //construct da embed
       const RegisteredEmbed = new Discord.MessageEmbed()
       .setColor(embedColor)
@@ -67,6 +60,6 @@ module.exports = {
       //send da embed
       message.channel.send(RegisteredEmbed)
     
-      log.save(logged5, './logs/register.txt')
+      log.save(`sent message.`, './logs/OPBCP/register.txt')
   }
 }

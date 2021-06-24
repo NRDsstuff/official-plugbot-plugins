@@ -8,6 +8,7 @@ const mainConfig = require('../../../../mainconfig.json')
 const purge = require('../../commands/moderation/purge')
 const ban = require('../../commands/moderation/ban')
 const kick = require('../../commands/moderation/kick')
+const clear = require('../../commands/moderation/clear')
 
 // load other functions
 
@@ -40,6 +41,10 @@ module.exports = {
                     purge.func(msg, args)
                     logger.save(`called out purge`, './logs/OPBCP/cmdhandler.txt')
                 break;
+
+                case "clear":
+                    clear.func(msg)
+                    logger.save(`clear was called out`, './logs/OPBCP/cmdhandler.txt')
 
                 default:
 

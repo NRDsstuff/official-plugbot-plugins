@@ -78,6 +78,10 @@ module.exports = {
                 > *${helpConfig.comments.v19}*
                 > **${mainConfig.prefix}${helpConfig.command20} ► ${helpConfig.values.v20}**
                 > *${helpConfig.comments.v20}*
+                > **${mainConfig.prefix}${helpConfig.command21} ► ${helpConfig.values.v21}**
+                > *${helpConfig.comments.v21}*
+                > **${mainConfig.prefix}${helpConfig.command22} ► ${helpConfig.values.v22}**
+                > *${helpConfig.comments.v22}*
                 ... aaaand that's all for now.`),
             ]
         })

@@ -10,7 +10,7 @@ const config = require('../configs/clientReady/conifg.json')
 module.exports = {
     name: `ready`,
     func: async function main(client){
-        logger.save(config.consoleReady, './logs/ready/login.txt')
+        logger.save(config.consoleReady, './logs/OPBRL/login.txt')
         client.on("ready", () =>{
             client.user.setPresence({
                 status: config.presence.status,  // You can show online, idle... Do not disturb is dnd

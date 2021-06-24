@@ -1,9 +1,9 @@
 
 // stuff
 
-fun = require('./OPBCP/launchers/bot/funlauncherbot')
-misc = require('./OPBCP/launchers/bot/misclauncherbot')
-mod = require('./OPBCP/launchers/bot/modlauncherbot')
+const fun = require('./OPBCP/launchers/bot/funlauncherbot')
+const misc = require('./OPBCP/launchers/bot/misclauncherbot')
+const mod = require('./OPBCP/launchers/bot/modlauncherbot')
 
 // load other functions
 

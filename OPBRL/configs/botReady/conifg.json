@@ -4,5 +4,5 @@
         "type": "LISTENING",
         "status": "idle"
     },
-    "consoleReady": "bot is ready"
+    "consoleReady": "${client.name}#${client.tag} (bot) is ready"
 }

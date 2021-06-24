@@ -2,9 +2,10 @@
 //your code
 
 const config = require('../../../../configs/OPBCP/mod/kick.json')
+const logger = require('../../../logger')
 
 module.exports = {
-    func: function main(message, args){
+    func: async function main(message, args){
         if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(config.invalidPermissions)
 
         let User = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
@@ -25,6 +26,7 @@ module.exports = {
         }
         
 
-        User.kick({reason: kickReason})
+        await User.kick({reason: kickReason})
+        await logger.save(`kicked ${User}. reason: ${kickReason}`, './logs/OPBCP/kick.txt')
     }
 }

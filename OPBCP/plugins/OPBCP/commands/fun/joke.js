@@ -22,6 +22,6 @@ module.exports = {
                 .body
         );
 
-        log.save(logged, './logs/joke')
+        log.save(logged, './logs/OPBCP/joke')
     }
 }
