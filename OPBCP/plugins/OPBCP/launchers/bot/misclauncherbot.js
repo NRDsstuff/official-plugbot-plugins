@@ -16,10 +16,12 @@ const stopwatch = require('../../commands/misc/stopwatch')
 const uptime = require('../../commands/misc/uptime')
 const userinfo = require('../../commands/misc/userinfo')
 const vote = require('../../commands/misc/vote')
+const hostinfo = require('../../commands/misc/hostinfo')
 
 // load other functions
 
 const logger = require('../../../logger')
+const pbsdk = require('../../../plugbotsdk')
 
 module.exports = {
     name: "misc",
@@ -32,10 +34,12 @@ module.exports = {
             const args = msg.content.slice(mainConfig.prefix.length).split(/ +/);
             const command = args.shift().toLocaleLowerCase();
 
+            if(!msg.content.includes(mainConfig.prefix)) return;
+            
             switch(command){
                 
                 case "allemojis":
-                    allemojis.func(msg)
+                    allemojis.func(msg, client)
                     logger.save('allemojis was called out.', './logs/OPBCP/cmdhandler.txt')
                 break;
 
@@ -89,6 +93,11 @@ module.exports = {
                     logger.save('vote was called out.', './logs/OPBCP/cmdhandler.txt')
                 break;
 
+                case "hostinfo":
+                    hostinfo.func(msg)
+                    pbsdk.log('hostinfo was called out', 'OPBCP', 'cmdhandler')
+                break;
+                
                 default:
 
                 break;

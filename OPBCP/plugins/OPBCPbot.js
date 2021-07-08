@@ -7,7 +7,7 @@ const mod = require('./OPBCP/launchers/bot/modlauncherbot')
 
 // load other functions
 
-const log = require('./logger')
+const pbsdk = require('./plugbotsdk')
 
 // code
 
@@ -15,7 +15,7 @@ module.exports = {
     name: "Official PluginBot Commands Pack",
     func: function a(bot){
 
-        log.save(`OPBCP for bot was called out.`, './logs/OPBCP/main.txt')
+        pbsdk.log(`OPBCP for bot was called out.`, 'OPBCP', 'main')
 
         // start it
 

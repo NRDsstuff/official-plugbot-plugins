@@ -1,6 +1,7 @@
 
 const Discord = require('discord.js')
-const config = require('../../../../configs/OPBCP/misc/botstats.json')
+const config = require('../../../../configs/OPBCP/misc/botstats.json');
+const plugbotsdk = require('../../../plugbotsdk');
 
 module.exports = {
     func: function a(msg, bot){
@@ -14,6 +15,6 @@ module.exports = {
         .addField(config.users, `${bot.users.cache.size}`, true)
         .setTimestamp()
 
-        msg.channel.send(embed);
+        plugbotsdk.reply(msg, embed, 'OPBCP', 'botstats')
     }
 }

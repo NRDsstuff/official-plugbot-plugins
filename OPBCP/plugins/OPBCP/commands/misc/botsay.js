@@ -1,34 +1,12 @@
 
-// args handler
-
-function normal(botsayContent, msg){
-
-    // check for @everyone permissions
-
-    if(!msg.member.hasPermission("MENTION_EVERYONE")){
-        if(args.includes `@everyone`){
-            msg.channel.send(config.mentionedEveryone)
-        }
-        else{
-            if(args.includes `@here`){
-                msg.channel.send(config.mentionedEveryone)
-            }
-            else{
-        msg.channel.send(botsayContent)
-            }
-        }
-    }
-    else{
-
-        // send the message
-
-        msg.channel.send(botsayContent)
-    }
-}
-
 //configs
 
+const mainConfig = require('../../../../mainconfig.json')
 const config = require('../../../../configs/OPBCP/misc/botsay.json')
+
+// PBSDK.
+
+const pbsdk = require('../../../plugbotsdk')
 
 // export the code
 
@@ -40,11 +18,20 @@ module.exports = {
 
         // delete the message
 
-        msg.delete()
+        pbsdk.delete(msg, 'OPBCP', 'botsay')
         
         // execute the command
 
-        normal(botsayContent, msg)
-        
+        if(!msg.member.hasPermission("MENTION_EVERYONE")){
+            if(!msg.content.includes('@everyone')){
+                if(!msg.content.includes('@here')){
+                    pbsdk.repeatAfterUser(msg, mainConfig.prefix, 'botsay', 'OPBCP', 'botsay')
+                }
+            }
+        }else{
+            pbsdk.repeatAfterUser(msg, mainConfig.prefix, 'botsay', 'OPBCP', 'botsay')
+        }
+
+
     }
 }

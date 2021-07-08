@@ -1,9 +1,10 @@
 
 const Discord = require('discord.js')
 const config = require('../../../../configs/OPBCP/misc/allemojis.json')
+const pbsdk = require('../../../plugbotsdk')
 
 module.exports = {
-    func: async function a(message){
+    func: async function a(message, bot){
         if(message.author.bot) return;
         try{
         let Emojis = "";
@@ -32,7 +33,7 @@ module.exports = {
         .setColor(0x2f3136)
         message.channel.send(emn);
         }catch(err){
-            if(err) return message.channel.send(`The Error occuring currently is : ${err.message}`)
+            if(err) pbsdk.reply(message, `The Error occuring currently is : ${err.message}`, 'OPBCP', 'allemojis')
     }
     }
 }

@@ -26,6 +26,8 @@ module.exports = {
             const bsc = `${mainConfig.prefix}botsay`
             const botsayContent = msg.content.substring(bsc.length)
 
+            if(!msg.content.includes(mainConfig.prefix)) return;
+
             switch(command){
 
                 case "botsay":

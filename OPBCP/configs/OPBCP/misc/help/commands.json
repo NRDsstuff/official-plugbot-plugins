@@ -21,7 +21,8 @@
         "v19": "unlock",
         "v20": "purge `number`",
         "v21": "bet `user` `bet`",
-        "v22": "cat"
+        "v22": "cat",
+        "v23": "hostinfo"
     },
     "values": {
         "v1": "show all emojis of this server",
@@ -45,7 +46,8 @@
         "v19": "unlock a channel",
         "v20": "delete `number` or messages",
         "v21": "place a `bet` on `someone`",
-        "v22": "show you an image of a cat"
+        "v22": "show you an image of a cat",
+        "v23": "info about the pc that this bot is hosted on"
     },
     "comments": {
         "v1": "ALL emojis",
@@ -69,6 +71,7 @@
         "v19": "lemme talk LEMME TALK",
         "v20": "`up to 100 messages` go BOOM",
         "v21": "idk how it works but ok",
-        "v22": "cute"
+        "v22": "cute",
+        "v23": "now everyone knows my pc sucks. GREAT!"
     }
 }

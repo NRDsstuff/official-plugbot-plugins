@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 
 // functions
 
-const log = require('../../../logger')
+const pbsdk = require('../../../plugbotsdk')
 
 //command-specific variables or whatever
 
@@ -14,11 +14,6 @@ const config = ('../../../../configs/OPBCP/misc/botinfo.json')
 
 module.exports = {
     func: function main(msg){
-        const whoIs = new Discord.MessageEmbed()
-        .setColor(config.embedColor)
-        .setTitle(`who am i?`)
-        .setDescription(`a bot made to make making bots easier \n (by NRD#1234)`)
-        msg.channel.send(whoIs)
-        log.save(`message sent`, './logs/OPBCP/whois')
+        pbsdk.replyQuickEmbed(msg, 'who am i?', 'a bot made to make making bots easier \n (by NRD#1234)', config.embedColor, 'OPBCP', 'botinfo')
     }
 }

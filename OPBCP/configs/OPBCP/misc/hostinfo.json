@@ -1,0 +1,7 @@
+{
+    "freeRam": "free RAM",
+    "totalRam": "total RAM",
+    "cpuModel": "CPU model",
+    "osType": "OS type",
+    "osUptime": "OS uptime"
+}

@@ -24,6 +24,8 @@ module.exports = {
             const args = msg.content.slice(mainConfig.prefix.length).split(/ +/);
             const command = args.shift().toLocaleLowerCase();
 
+            if(!msg.content.includes(mainConfig.prefix)) return;
+
             switch(command){
                 case "changemymind":
                     changeMyMind.func(msg, args)
